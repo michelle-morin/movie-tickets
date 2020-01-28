@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Movie Tickets</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class ="jumbotron">
+      <h1>Epicodus Cinemas</h1>
+    </div>
+    <form>
+      <h3>Now showing! Select your movie:</h3>
+      <select class="form-control" id="movietitle">
+        <option>1917</option>
+        <option>Lord of the Rings</option>
+        <option>King Kong (1933)</option>
+      </select>
+      <h3>Select your showtime:</h3>
+      <select class="form-control" id="showtime">
+        <option>11:30 AM</option>
+        <option>3:00 PM</option>
+        <option>9:00 PM</option>
+      </select>
+      <div class="form-group">
+        <label for="userage">Enter your age:</label>
+        <input type="text" class="form-control" id="userage">
+      </div>
+      <h3>Ticket Quantity:</h3>
+      <select class="form-control" id="movietime">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button type="submit" class="btn btn-success">Add to cart</button>
+    </form>
+
+    <div id="ticketconfirmation">
+      <h1>Please review your ticket details</h1>
+      <p>Movie Title <span class="movietitle"></span></p>
+      <p>Showtime <span class="showtime"></span></p>
+      <p>Ticket Quantity <span class="quantity"></span></p>
+      <p>Total Price <span class="totalprice"></span></p>
+
+      <div id="buttons">
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
