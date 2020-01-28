@@ -16,42 +16,45 @@
     </div>
     <form>
       <h3>Now showing! Select your movie:</h3>
-      <select class="form-control" id="movietitle">
+      <select class="form-control" id="movie-title">
         <option>1917</option>
         <option>Lord of the Rings</option>
         <option>King Kong (1933)</option>
       </select>
       <h3>Select your showtime:</h3>
       <select class="form-control" id="showtime">
-        <option>11:30 AM</option>
-        <option>3:00 PM</option>
-        <option>9:00 PM</option>
+        <option value="Matinee">11:30 AM</option>
+        <option value="Matinee">3:00 PM</option>
+        <option value="Nighttime">9:00 PM</option>
       </select>
       <div class="form-group">
-        <label for="userage">Enter your age:</label>
-        <input type="text" class="form-control" id="userage">
+        <label for="user-age">Enter your age:</label>
+        <input type="text" class="form-control" id="user-age">
       </div>
       <h3>Ticket Quantity:</h3>
-      <select class="form-control" id="movietime">
+      <select class="form-control" id="movie-time">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <button type="submit" class="btn btn-success">Add to cart</button>
+      <button type="submit" class="btn btn-info">Add to cart</button>
     </form>
 
-    <div id="ticketconfirmation">
+    <div id="ticket-review">
       <h1>Please review your ticket details</h1>
-      <p>Movie Title <span class="movietitle"></span></p>
-      <p>Showtime <span class="showtime"></span></p>
-      <p>Ticket Quantity <span class="quantity"></span></p>
-      <p>Total Price <span class="totalprice"></span></p>
+      <p>Movie Title: <span class="movie-title"></span></p>
+      <p><span class="showtime"></span> showing</p>
+      <p>Ticket Quantity: <span class="quantity"></span></p>
+      <p>Total Price: $<span class="total-price"></span></p>
+      <p>Please resubmit the form to make any changes to your order.</p>
+      <button id="purchase" type="submit" class="btn-success">Purchase!</button>
+    </div>
 
-      <div id="buttons">
-        
-      </div>
+    <div id="ticket-confirmation">
+      <h1>Thanks for your purchase!</h1>
+      <p>Enjoy your <span class="showtime"></span> showing of <span class="movie-title"></span>!</p>
     </div>
   </div>
 
