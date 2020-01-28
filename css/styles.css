@@ -1,3 +1,29 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #ticket-review, #ticket-confirmation {
   display: none;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+form {
+  padding: 30px;
+}
+
+button.btn-info, button.btn-success {
+  margin-top: 20px;
+  width: 100%;
+}
+
+label, h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+label {
+  margin-top: 20px;
 }

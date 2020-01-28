@@ -10,7 +10,7 @@ Ticket.prototype.assignedPrice = function() {
     price = 15
   } else if (this.title == "Lord of the Rings") {
     price = 12
-  } else if (this.title == "King Kong (1933") {
+  } else if (this.title == "King Kong (1933)") {
     price = 10
   }
   if (this.time == "Matinee") {
@@ -50,10 +50,13 @@ $(document).ready(function(){
       alert("Please enter your age.");
     }
 
+    var confirmationNumber = (Math.random() * 1000000).toFixed(0);
+
     $("button#purchase").click(function() {
       $("form").hide();
       $("#ticket-review").hide();
       $("#ticket-confirmation").show();
+      $(".confirmation-number").html(confirmationNumber);
     });
   });
 });

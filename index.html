@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -8,13 +7,12 @@
   <script src="js/scripts.js"></script>
   <title>Movie Tickets</title>
 </head>
-
 <body>
   <div class="container">
     <div class ="jumbotron">
       <h1>Epicodus Cinemas</h1>
     </div>
-    <form>
+    <form class="well">
       <h3>Now showing! Select your movie:</h3>
       <select class="form-control" id="movie-title">
         <option>1917</option>
@@ -41,23 +39,25 @@
       </select>
       <button type="submit" class="btn btn-info">Add to cart</button>
     </form>
-
     <div id="ticket-review">
-      <h1>Please review your ticket details</h1>
-      <p>Movie Title: <span class="movie-title"></span></p>
-      <p><span class="showtime"></span> showing</p>
-      <p>Ticket Quantity: <span class="quantity"></span></p>
-      <p>Total Price: $<span class="total-price"></span></p>
-      <p>Please resubmit the form to make any changes to your order.</p>
-      <button id="purchase" type="submit" class="btn-success">Purchase!</button>
+      <div class="well">
+        <h1>Please review your ticket details</h1>
+        <p>Movie Title: <span class="movie-title"></span></p>
+        <p><span class="showtime"></span> showing</p>
+        <p>Ticket Quantity: <span class="quantity"></span></p>
+        <p>Total Price: $<span class="total-price"></span></p>
+        <p>Please resubmit the form to make any changes to your order.</p>
+        <button id="purchase" type="submit" class="btn-success">Purchase!</button>
+      </div>
     </div>
-
     <div id="ticket-confirmation">
-      <h1>Thanks for your purchase!</h1>
-      <p>Enjoy your <span class="showtime"></span> showing of <span class="movie-title"></span>!</p>
+      <div class="well">
+        <h1>Thanks for your purchase!</h1>
+        <h3>Enjoy your <span class="showtime"></span> showing of <span class="movie-title"></span>!</h3>
+        <p>Confirmation number: <span class="confirmation-number"></span></p>
+        <p>Display your confirmation number when you arrive at the theatre.</p>
+      </div>
     </div>
   </div>
-
 </body>
-
 </html>
