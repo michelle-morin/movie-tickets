@@ -1,29 +1,29 @@
 function Ticket(title, time, age) {
-  this.title = title;
-  this.time = time;
-  this.age = age;
+  this.title = title,
+  this.time = time,
+  this.age = age,
+  this.price = 0
 }
 
-Ticket.prototype.assignedPrice = function() {
-  var price;
+Ticket.prototype.assignedPrice = function(quantity) {
   if (this.title == "1917") {
-    price = 15
+    this.price += 15
   } else if (this.title == "Lord of the Rings") {
-    price = 12
+    this.price += 12
   } else if (this.title == "King Kong (1933)") {
-    price = 10
+    this.price += 10
   }
   if (this.time == "Matinee") {
-    price = price - 2;
+    this.price -= 2;
   } else if (this.time == "Nighttime") {
-    price = price + 1;
+    this.price += 1;
   }
   if (this. age <= 15 || this.age >= 60) {
-    price = price - 2;
+    this.price -= 2;
   } else {
-    price = price;
+    this.price = this.price;
   }
-  return price;
+  this.price *= quantity;
 } 
 
 //Front-end logic
@@ -39,12 +39,11 @@ $(document).ready(function(){
     var userTicket = new Ticket(userMovie, userShowTime, userAge);
 
     if (userAge) {
-      var pricePerTicket = userTicket.assignedPrice();
-      var totalPrice = pricePerTicket * userQuantity;
+      userTicket.assignedPrice(userQuantity);
       $(".movie-title").html(userMovie);
       $(".showtime").html(userShowTime);
       $(".quantity").html(userQuantity);
-      $(".total-price").html(totalPrice);
+      $(".total-price").html(userTicket.price);
       $("#ticket-review").show();
     } else {
       alert("Please enter your age.");
